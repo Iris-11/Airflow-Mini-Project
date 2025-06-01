@@ -1,0 +1,15 @@
+{"timestamp":"2025-06-01T10:59:52.654170","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-01T10:59:52.654678","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/iss_location.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-01T10:59:52.710828Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:52.711394Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:52.711678Z","level":"info","event":"Current task name:reverse_geocode","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:52.711993Z","level":"info","event":"Dag name:iss_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:53.243769Z","level":"info","event":"The ISS currently is above: Futrono, Provincia de Ranco, Región de Los Ríos, 5180000, Chile.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:53.244632Z","level":"info","event":" latitude:-40.0223","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:53.245160Z","level":"info","event":"longitude:-71.8378","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:53.245884Z","level":"info","event":" :)","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:53.251344Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:53.251991Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:53.252573Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): reverse_geocode>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:53.244300","level":"info","event":"Done. Returned value was: Futrono, Provincia de Ranco, Región de Los Ríos, 5180000, Chile","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
+{"timestamp":"2025-06-01T10:59:53.244705","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('01972b25-ca9b-71ed-8378-1f3d88efded0'), task_id='reverse_geocode', dag_id='iss_dag', run_id='manual__2025-06-01T10:59:46.444481+00:00', try_number=1, map_index=-1, hostname='02497a58636d', context_carrier={}, task=<Task(_PythonDecoratedOperator): reverse_geocode>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2025, 6, 1, 10, 59, 52, 105871, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}

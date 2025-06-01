@@ -1,0 +1,15 @@
+{"timestamp":"2025-06-01T11:02:52.072355","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-01T11:02:52.072931","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/iss_location.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-01T11:02:52.137886Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T11:02:52.139098Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T11:02:52.140600Z","level":"info","event":"Current task name:reverse_geocode","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T11:02:52.141960Z","level":"info","event":"Dag name:iss_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T11:02:52.665287Z","level":"info","event":"The ISS currently is above: Municipio de Cañada de Gómez, Departamento Iriondo, 2505, Argentina.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T11:02:52.665791Z","level":"info","event":" latitude:-32.7150","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T11:02:52.666721Z","level":"info","event":"longitude:-61.4837","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T11:02:52.667178Z","level":"info","event":" :)","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T11:02:52.667825Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T11:02:52.668274Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T11:02:52.668624Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): reverse_geocode>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T11:02:52.665634","level":"info","event":"Done. Returned value was: Municipio de Cañada de Gómez, Departamento Iriondo, 2505, Argentina","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
+{"timestamp":"2025-06-01T11:02:52.666028","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('01972b28-8e6d-7cf7-9e7a-b8096cc64955'), task_id='reverse_geocode', dag_id='iss_dag', run_id='manual__2025-06-01T11:02:47.640122+00:00', try_number=1, map_index=-1, hostname='02497a58636d', context_carrier={}, task=<Task(_PythonDecoratedOperator): reverse_geocode>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2025, 6, 1, 11, 2, 51, 568020, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}

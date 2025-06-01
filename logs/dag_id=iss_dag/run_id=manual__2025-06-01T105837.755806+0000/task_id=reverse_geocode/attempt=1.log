@@ -1,0 +1,15 @@
+{"timestamp":"2025-06-01T10:58:40.986817","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-01T10:58:40.987561","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/iss_location.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-01T10:58:41.051791Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:58:41.052438Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:58:41.052760Z","level":"info","event":"Current task name:reverse_geocode","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:58:41.053030Z","level":"info","event":"Dag name:iss_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:58:41.637431Z","level":"info","event":"The ISS currently is above: No address found.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:58:41.637955Z","level":"info","event":" latitude:-42.6523","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:58:41.638483Z","level":"info","event":"longitude:-76.6966","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:58:41.638909Z","level":"info","event":" :)","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:58:41.639466Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:58:41.640671Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:58:41.641522Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): reverse_geocode>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:58:41.637850","level":"info","event":"Done. Returned value was: No address found","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
+{"timestamp":"2025-06-01T10:58:41.638202","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('01972b24-be50-7870-9079-be7dd68df18c'), task_id='reverse_geocode', dag_id='iss_dag', run_id='manual__2025-06-01T10:58:37.755806+00:00', try_number=1, map_index=-1, hostname='02497a58636d', context_carrier={}, task=<Task(_PythonDecoratedOperator): reverse_geocode>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2025, 6, 1, 10, 58, 40, 419565, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}

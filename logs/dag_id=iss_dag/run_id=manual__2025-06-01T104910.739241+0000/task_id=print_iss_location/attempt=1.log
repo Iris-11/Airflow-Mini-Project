@@ -1,0 +1,13 @@
+{"timestamp":"2025-06-01T10:49:11.738210","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-01T10:49:11.738764","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/iss_location.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-01T10:49:11.777291Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:49:11.777937Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:49:11.778293Z","level":"info","event":"Current task name:print_iss_location","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:49:11.778691Z","level":"info","event":"Dag name:iss_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:49:15.308202Z","level":"info","event":"ISS Current Location at 2025-06-01 10:49:16 UTC:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:49:15.310258Z","level":"info","event":"Latitude: -51.1977, Longitude: -127.3435","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:49:15.310901Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:49:15.311435Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:49:15.311766Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): print_iss_location>","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:49:15.305569","level":"info","event":"Done. Returned value was: ['-51.1977', '-127.3435']","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
+{"timestamp":"2025-06-01T10:49:15.306288","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('01972b1c-1773-760b-a830-1e5085c57287'), task_id='print_iss_location', dag_id='iss_dag', run_id='manual__2025-06-01T10:49:10.739241+00:00', try_number=1, map_index=-1, hostname='02497a58636d', context_carrier={}, task=<Task(_PythonDecoratedOperator): print_iss_location>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2025, 6, 1, 10, 49, 11, 246980, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}
