@@ -99,7 +99,7 @@ Same output as above, but cleaner code
 * XComs in Airflow: [https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/xcoms.html](https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/xcoms.html)
 
 ---
-## 3. ISS Location API DAG
+# Mini-Project: ISS Location API DAG
 Create a DAG to 
 1. load ISS(International Space Station) location
 2. Use OpenStreetMaps API to reverese geocode the address of the location
