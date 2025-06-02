@@ -100,7 +100,12 @@ Same output as above, but cleaner code
 
 ---
 # Mini-Project: ISS Location API DAG
-Create a DAG to 
+This mini-project is a personal learning initiative to practice using Apache Airflow and working with external APIs. It fetches real-time location data from the International Space Station (ISS) and uses reverse geocoding to identify the nearest location on Earth.
+* Data Source: Open Notify ISS API- http://api.open-notify.org/iss-now.json
+* Reverse Geocoding: Nominatim OpenStreetMap API- https://nominatim.org/release-docs/latest/api/Reverse/
+
+
+DAG Tasks-
 1. load ISS(International Space Station) location
 2. Use OpenStreetMaps API to reverese geocode the address of the location
 
