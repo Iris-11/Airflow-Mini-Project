@@ -1,5 +1,5 @@
 # Airflow-Mini-Project
-Learning the fundamentals of Apache Airflow through a hands-on mini-project. This demo project uses open APIs to collect data and applies a basic ETL (Extract, Transform, Load) pipeline using Airflow. 
+Learning the fundamentals of Apache Airflow through a hands-on mini-project. 
 
 ## Airflow set up steps - using docker
 ### 1. Download Docker Compose YAML
