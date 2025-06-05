@@ -1,0 +1,15 @@
+{"timestamp":"2025-06-05T18:55:56.359962","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-05T18:55:56.360851","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/iss_location.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-05T18:55:56.464445Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T18:55:56.466136Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T18:55:56.466683Z","level":"info","event":"Current task name:reverse_geocode","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T18:55:56.467119Z","level":"info","event":"Dag name:iss_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T18:55:57.042457Z","level":"info","event":"The ISS currently is above: No address found.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T18:55:57.043010Z","level":"info","event":" latitude:3.9768","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T18:55:57.043349Z","level":"info","event":"longitude:-171.7187","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T18:55:57.043630Z","level":"info","event":" :)","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T18:55:57.043306","level":"info","event":"Done. Returned value was: No address found","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
+{"timestamp":"2025-06-05T18:55:57.043596","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('01974173-0bab-75f9-b135-cd6a40126a24'), task_id='reverse_geocode', dag_id='iss_dag', run_id='manual__2025-06-05T18:55:48.108652+00:00', try_number=1, map_index=-1, hostname='a4280b11301a', context_carrier={}, task=<Task(_PythonDecoratedOperator): reverse_geocode>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2025, 6, 5, 18, 55, 55, 547002, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}
+{"timestamp":"2025-06-05T18:55:57.334143Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T18:55:57.334530Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T18:55:57.334819Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): reverse_geocode>","chan":"stdout","logger":"task"}

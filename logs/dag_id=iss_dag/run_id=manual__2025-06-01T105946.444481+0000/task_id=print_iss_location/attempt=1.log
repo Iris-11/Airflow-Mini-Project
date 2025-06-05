@@ -1,0 +1,13 @@
+{"timestamp":"2025-06-01T10:59:48.083058","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-01T10:59:48.083661","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/iss_location.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-01T10:59:48.152191Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:48.152729Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:48.153013Z","level":"info","event":"Current task name:print_iss_location","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:48.153270Z","level":"info","event":"Dag name:iss_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:51.676750Z","level":"info","event":"ISS Current Location at 2025-06-01 10:59:53 UTC:","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:51.677117Z","level":"info","event":"Latitude: -40.0223, Longitude: -71.8378","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:51.676956","level":"info","event":"Done. Returned value was: ['-40.0223', '-71.8378']","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
+{"timestamp":"2025-06-01T10:59:51.677260","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('01972b25-ca9a-734c-b0ca-5aebd65dad1d'), task_id='print_iss_location', dag_id='iss_dag', run_id='manual__2025-06-01T10:59:46.444481+00:00', try_number=1, map_index=-1, hostname='02497a58636d', context_carrier={}, task=<Task(_PythonDecoratedOperator): print_iss_location>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2025, 6, 1, 10, 59, 46, 989137, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}
+{"timestamp":"2025-06-01T10:59:51.722831Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:51.723200Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-01T10:59:51.726988Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): print_iss_location>","chan":"stdout","logger":"task"}

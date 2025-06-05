@@ -1,0 +1,15 @@
+{"timestamp":"2025-06-05T13:08:05.913146","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-06-05T13:08:05.913779","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/iss_location.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-06-05T13:08:06.008589Z","level":"info","event":"Task instance is in running state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T13:08:06.009482Z","level":"info","event":" Previous state of the Task instance: queued","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T13:08:06.009951Z","level":"info","event":"Current task name:reverse_geocode","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T13:08:06.010345Z","level":"info","event":"Dag name:iss_dag","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T13:08:06.554219Z","level":"info","event":"The ISS currently is above: LW-Weg, Moritzburg, Meißen, Sachsen, 01468, Deutschland.","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T13:08:06.554698Z","level":"info","event":" latitude:51.1792","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T13:08:06.555086Z","level":"info","event":"longitude:13.6432","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T13:08:06.555362Z","level":"info","event":" :)","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T13:08:06.554998","level":"info","event":"Done. Returned value was: LW-Weg, Moritzburg, Meißen, Sachsen, 01468, Deutschland","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
+{"timestamp":"2025-06-05T13:08:06.555279","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('01974033-d692-7f3a-aef7-91647e620f5d'), task_id='reverse_geocode', dag_id='iss_dag', run_id='scheduled__2025-06-05T13:06:57.106308+00:00', try_number=1, map_index=-1, hostname='b30de011beb4', context_carrier={}, task=<Task(_PythonDecoratedOperator): reverse_geocode>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=2, start_date=datetime.datetime(2025, 6, 5, 13, 8, 5, 410257, tzinfo=TzInfo(UTC)), end_date=None, is_mapped=False)","logger":"task"}
+{"timestamp":"2025-06-05T13:08:06.601160Z","level":"info","event":"Task instance in success state","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T13:08:06.601779Z","level":"info","event":" Previous state of the Task instance: running","chan":"stdout","logger":"task"}
+{"timestamp":"2025-06-05T13:08:06.602222Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): reverse_geocode>","chan":"stdout","logger":"task"}

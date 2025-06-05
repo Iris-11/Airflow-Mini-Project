@@ -2,6 +2,8 @@ from airflow import DAG
 from airflow.decorators import task
 from datetime import datetime, timedelta
 import requests
+import oracledb
+
 
 default_args={
         'owner': 'airflow',
@@ -11,7 +13,7 @@ default_args={
 with DAG(
     dag_id="iss_dag",
     start_date=datetime(2025, 1, 1),
-    schedule=timedelta(days=1),
+    schedule=timedelta(minutes=5),
     catchup=False,
     default_args = default_args
 ) as dag:
@@ -50,8 +52,30 @@ with DAG(
         print(f"The ISS currently is above: {address}.\n latitude:{lat}\nlongitude:{long}\n :)")
         return address
 
+    @task
+    def insert_into_oracle(location, address):
+        lat = location[0]
+        lon = location[1]
+        # Setup your Oracle connection details here:
+        dsn = oracledb.makedsn("host.docker.internal", 1521, service_name="XEPDB1")
+        username = "system"
+        password = "root"
+        
+        conn = oracledb.connect(user=username, password=password, dsn=dsn)
+        cursor = conn.cursor()
+
+        # Insert data; assuming 'id' is auto-generated in your table!
+        sql = """
+            INSERT INTO source_table (iss_latitude, iss_longitude, address)
+            VALUES (:lat, :lon, :addr)
+        """
+        cursor.execute(sql, lat=lat, lon=lon, addr=address)
+        conn.commit()
+        cursor.close()
+        conn.close()
+        print("Inserted ISS location into Oracle DB.")
 
     location = print_iss_location()
-    reverse_geocode(location)
-
+    address = reverse_geocode(location)
+    insert_into_oracle(location,address)
     
