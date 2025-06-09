@@ -108,6 +108,9 @@ This mini-project is a personal learning initiative to practice using Apache Air
 DAG Tasks-
 1. load ISS(International Space Station) location
 2. Use OpenStreetMaps API to reverese geocode the address of the location
+3. Insert the coordinates and the address into a database (OracleSQL)
+
+Another DAG added that- copies the data from that table to another log table
 
 Sample output of Airflow UI- 
 ![alt text](image.png)
@@ -133,3 +136,19 @@ Log message source details: sources=["/opt/airflow/logs/dag_id=iss_dag/run_id=ma
 [2025-06-01, 16:32:52] INFO - Task instance in success state: chan="stdout": source="task"
 [2025-06-01, 16:32:52] INFO -  Previous state of the Task instance: running: chan="stdout": source="task"
 [2025-06-01, 16:32:52] INFO - Task operator:<Task(_PythonDecoratedOperator): reverse_geocode>: chan="stdout": source="task"
+
+## Oracle DB integration for logging real-time ISS location data into a relational database. Two DAGs are used:
+
+### 1. `iss_dag`: API → Geocode → Oracle Insert (Python)
+
+- Fetches ISS location using [Open Notify API](http://api.open-notify.org/iss-now.json)
+- Uses [Nominatim API](https://nominatim.org/release-docs/latest/api/Reverse/) for reverse geocoding
+- Inserts data directly into Oracle using the `oracledb` Python client
+- Fully written using TaskFlow API (`@task`)
+
+### 2. `iss_log_dag`: OracleOperator (PL/SQL)
+
+- Calls a stored PL/SQL procedure (`copy_new_data`) that copies rows from a source table to a target table
+- Uses Airflow's `OracleOperator`
+
+---
