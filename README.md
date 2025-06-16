@@ -152,3 +152,41 @@ Log message source details: sources=["/opt/airflow/logs/dag_id=iss_dag/run_id=ma
 - Uses Airflow's `OracleOperator`
 
 ---
+# Notes for SQL 
+Features-
+
+2 tables-
+
+1. Source table 
+2. Target table
+
+use airflow to copy data from one table to another every ten minutes
+
+CREATE TABLE target_table (
+2    id NUMBER PRIMARY KEY,
+3    iss_latitude NUMBER(10,6),
+4    iss_longitude NUMBER(10,6),
+5    address VARCHAR2(255),
+6    captured_at DATE
+7  );
+
+SQL> CREATE TABLE source_table (
+2    id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+3    iss_latitude NUMBER(10,6),
+4    iss_longitude NUMBER(10,6),
+5    address VARCHAR2(255),
+6    captured_at DATE DEFAULT SYSDATE
+7  );
+
+CREATE OR REPLACE PROCEDURE copy_new_iss_data AS
+BEGIN
+INSERT INTO target_table (id, iss_latitude, iss_longitude, address, captured_at)
+SELECT s.id, s.iss_latitude, s.iss_longitude, s.address, s.captured_at
+FROM source_table s
+WHERE NOT EXISTS (
+SELECT 1 FROM target_table t WHERE t.id = s.id
+);
+COMMIT;
+END;
+
+not a good practice- oracledb to directly connect to the database, a better way would be to add a provider- oracle, then add a connection to it
